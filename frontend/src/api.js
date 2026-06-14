@@ -1,7 +1,9 @@
 import axios from "axios";
 
+// Menggunakan path relatif '/api'. 
+// Di laptop dia akan menembak localhost, di Vercel dia akan menembak domain Vercel Anda sendiri secara otomatis.
 const api = axios.create({
-  baseURL: "https://medis-smudama.vercel.app/api"
+  baseURL: "/api"
 });
 
 api.interceptors.request.use((config) => {
